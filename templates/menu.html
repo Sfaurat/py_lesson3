@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block h1 %}
+Меню
+{% endblock %}
+
+{% block content %}
+  {% for row in menu %}
+    <div class='blog-post'>
+      <h3>{{ row.name }}</h3>
+
+      <p>Цена: {{ row.price }} Руб.</p>
+      <input type="text" class="form-control" id="num" name="num" placeholder="Кол-во">
+      <button type="submit" class="btn btn-primary">Добавить</button>
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock %}
